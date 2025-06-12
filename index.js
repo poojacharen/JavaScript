@@ -1,14 +1,22 @@
- // Constants
+// In JS we have 2 categories of types
+// 1. Primitive types/ Value types
+// - Number
+// - String
+// - Boolean
+// - Undefined
+// - Null
+// - Symbol
+// 2. Reference types
+// - Objects
+// - Arrays
+// - Functions
 
-//  let interestRate = 0.3;
-//  interestRate = 1;
-//  console.log
+// Primitive types are immutable, meaning they cannot be changed once created.
 
- const interestRate = 0.3;
- interestRate = 1;
- console.log(interestRate);
-//  interestRate = 1; // This will throw an error because interestRate is a constant
-//  console.log(interestRate); // Output: 0.3
+let name = "Pooja"; // String Literal
+let age = 29; // Number Literal
+let isApproved = true; // Boolean Literal
+let firstName = undefined; // Undefined Literal
+let lastName = null; // Null Literal  we use null in situations where we want to explicitly clear the value of a variable
 
-// If we don't need to reassign constant should be your default choice. Otherwise if we need to 
-// reassign a variable, we should use let.
+// Reference types are mutable, meaning they can be changed after creation.
