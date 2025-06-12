@@ -1,25 +1,7 @@
-// Reference Types
-// Objects, Arrays, Functions, and more
+// Arrays - it is a collection of items. It is a data structure that we use to represent a list of items.
+// [] - Array Literal
 
-// Objects
-// {} object literal
+let selectedColors = ['red', 'blue', 'black'];
+selectedColors[3] = 'green'; // Adding a new color to the array
+console.log(selectedColors.length);  // output: 4 // Length of the array
 
-// Object is a collection of key-value pairs
-let person = {
-    name: "Pooja",
-    age : 29
-};
-
-
-
-// Dot Notation - to change the value of a key
-person.name = "Poojitha";
-
-// Also, we use dot notation to read the value of a key
-
-// bracket notation - to change the value of a key
-person["name"] = "Pooji";
-
-console.log(person.name);
-
-// Dot notation is preferred over bracket notation
