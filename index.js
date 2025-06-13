@@ -6,17 +6,27 @@
 // Different kinds of operators
 // Arithmetic Operators, Assignment Operators, Comparison Operators, Logical Operators, Bitwise Operators 
 
-// 2. Assignment Operators (=)
+// 3. Comparison Operators
+// The result of an expression in comparisn operators is always a boolean value 
 
 let x = 10;
 
-x = x + 5;
-x += 5; // This is the same as x = x + 5;
+// Relational Operators 
 
-// This can be used with all other arithmetic operators
+console.log( x > 5); // true
+console.log( x >= 5); // true
+console.log( x < 5); // false
+console.log( x <= 5); // false
 
-x = x * 3;
-x *= 3;
+// Equality Operators
+
+console.log(x === 10); // true
+console.log( x !== 10); // false
+
+
+
+
+
 
 
 
