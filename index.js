@@ -6,22 +6,23 @@
 // Different kinds of operators
 // Arithmetic Operators, Assignment Operators, Comparison Operators, Logical Operators, Bitwise Operators 
 
-// 3. Comparison Operators
-// The result of an expression in comparisn operators is always a boolean value 
+// 4. Equality Operators 
+// In JS we have two equality operators: == and ===
 
-let x = 10;
+// Strict Equality Operator (===) : Tis ensures that both these values are equal and of the same type
 
-// Relational Operators 
+console.log(5 === 5); // true
+console.log('5' === 5); // false // because the type is different 
 
-console.log( x > 5); // true
-console.log( x >= 5); // true
-console.log( x < 5); // false
-console.log( x <= 5); // false
+// Loose Equality Operator (==) : This operator checks for equality but does not consider the type of the values
 
-// Equality Operators
+console.log(5 == 5); // true
+console.log('5' == 5); // true // because it converts the string to a string and then compares 
+console.log(true == 5); // true // because it converts true to a boolean and then compares 
 
-console.log(x === 10); // true
-console.log( x !== 10); // false
+// Note : It is generaly recommended to use the strict equality operator (===)
+
+
 
 
 
