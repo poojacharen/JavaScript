@@ -1,21 +1,40 @@
-// Functions are one of the fundamental building blocks in JS 
-// It is basically a set of statements that performs a task or calculates a value
+// Operators 
+// In JS there are different kinds of operators. We use this operators along with our variables
+// and constants to create expressions. And with these expressions we can implement logic and algorithms
+// Operators & variables --> Expressions --> Algorithms
 
-// Types of functions in JS
+// Different kinds of operators
+// Arithmetic Operators, Assignment Operators, Comparison Operators, Logical Operators, Bitwise Operators 
 
-// Performing a task
-function greet(name, lastName) // variable as a parameter // name and lastName are parameters
-{
-    console.log("Hello " + name + " " + lastName);
+// 1. Arithmetic Operators - used for performing calculations
+// Arithmetic operators usually take upto two operands ( x, y) and return a new value.
 
-}
-greet("Pooja", "Nagallapati") // output: Hello Pooja Nagallapati // calling the function with arguments
 
-// Calculating a value
-function square(number) // variable as a parameter
-{
-    return number * number; // returns the square of the number
-}
+let x = 10;
+let y = 20;
 
-console.log(square(2)); // output: 4
+console.log(x + y);  // Addition // x + y is an expression
+console.log(x - y); // Subtraction
+console.log(x * y); // Multiplication
+console.log(x / y); // Division
+console.log(x % y); // Modulus ( Remainder of x divided by y)
+console.log(x ** y); // Exponentiation ( x raised to the power of y)
+
+
+// Increment Operators are indicated by (++)
+
+console.log(++x); 
+console.log(x++);
+console.log(x);
+
+// Decrement Operators are indicated by (--)
+
+console.log(--y); 
+console.log(y--); 
+console.log(y);
+
+
+
+
+
 
