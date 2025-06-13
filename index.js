@@ -4,11 +4,12 @@
 // Types of functions in JS
 
 // Performing a task
-function greet(name, lastName) // variable as a parameter
+function greet(name, lastName) // variable as a parameter // name and lastName are parameters
 {
     console.log("Hello " + name + " " + lastName);
 
 }
+greet("Pooja", "Nagallapati") // output: Hello Pooja Nagallapati // calling the function with arguments
 
 // Calculating a value
 function square(number) // variable as a parameter
