@@ -1,18 +1,23 @@
-// Operators Precedence 
-// It is the order in which operators are evaluated in an expression. (BODMAS)
+// Exercise :
 
-// eg : 1
-let x = 10;
-let y = 5;
+// let a = 'red';
+// let b = 'blue';
 
-let z = x + y * 2; // 20
+// console.log(a); // red
+// console.log(b); // blue
 
-// eg : 2
-let a = 5;
-let b = 20;
+// we need to swap the results to blue and red
 
-let c = (a + b) * 3; // 75
 
+let a = 'red';
+let b = 'blue';
+
+let c = a;
+a = b;
+b = c;
+
+console.log(a);
+console.log(b);
 
 
 
