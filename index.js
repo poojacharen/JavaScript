@@ -6,22 +6,61 @@
 // Different kinds of operators
 // Arithmetic Operators, Assignment Operators, Comparison Operators, Logical Operators, Bitwise Operators 
 
-// Ternary Operator or Conditionl Operator 
+// 5. Logical Operators 
+// We use this operators to make desicions based on multiple conditions
 
-// If a customer has more than 100 points,
-// they are a 'gold' customer, otherwise
-// they are a 'silver' customer.
+// There are three types of logical operators 
 
-// let points = 300;
-// let type = points > 320 ? 'gold' : 'silver';
+// 1. Logical AND (&&)
+// This operator returns TRUE if both operands are TRUE, otherwise it returns FALSE
 
-// console.log(type); // gold
+console.log(true && true); // true
+console.log(false && false); // false
+console.log(false && true); // false
+console.log(true && false); // false
+
+// eg: If the applicant has high income and good credit score then they will be eligible for loans.
 
 
-let points = 200;
-let type = points > 320 ? 'gold' : 'silver';
+// let highIncome = true;
+// let goodCreditScore = true;
 
-console.log(type); // silver
+// let eligibleForLoans = highIncome && goodCreditScore;
+
+// console.log(eligibleForLoans); // true
+
+// 2. Logical OR (||)
+// This operator returns TRUE if one of the operands is TRUE, otherwise it returns FALSE
+
+// let highIncome = true;
+// let goodCreditScore = true;
+
+// let eligibleForLoans = highIncome || goodCreditScore;
+
+// console.log(eligibleForLoans); // true
+
+// or another example
+
+// let highIncome = false;
+// let goodCreditScore = true;
+
+// let eligibleForLoans = highIncome && goodCreditScore;
+
+// console.log(eligibleForLoans); // true
+
+
+// 3. Logical NOT (!) 
+// This operator negates the value of the operand. If the operand is TRUE, it returns FALSE and vice versa.
+
+let highIncome = false;
+let goodCreditScore = false;
+let eligibleForLoans = highIncome || goodCreditScore;
+console.log('Eligible', eligibleForLoans); // false
+
+// Not (!)
+let applicationRefused = !eligibleForLoans;
+console.log('Application Refused', applicationRefused); // true
+
 
 
 
