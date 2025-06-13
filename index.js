@@ -6,60 +6,54 @@
 // Different kinds of operators
 // Arithmetic Operators, Assignment Operators, Comparison Operators, Logical Operators, Bitwise Operators 
 
-// 5. Logical Operators 
-// We use this operators to make desicions based on multiple conditions
+// Logical Operators with Non - Boolean Values
 
-// There are three types of logical operators 
+false || true; // true
+false || 'Pooja'; // 'Pooja'
+false || 1; // 1 
 
-// 1. Logical AND (&&)
-// This operator returns TRUE if both operands are TRUE, otherwise it returns FALSE
-
-console.log(true && true); // true
-console.log(false && false); // false
-console.log(false && true); // false
-console.log(true && false); // false
-
-// eg: If the applicant has high income and good credit score then they will be eligible for loans.
-
-
-// let highIncome = true;
-// let goodCreditScore = true;
-
-// let eligibleForLoans = highIncome && goodCreditScore;
-
-// console.log(eligibleForLoans); // true
-
-// 2. Logical OR (||)
-// This operator returns TRUE if one of the operands is TRUE, otherwise it returns FALSE
-
-// let highIncome = true;
-// let goodCreditScore = true;
-
-// let eligibleForLoans = highIncome || goodCreditScore;
-
-// console.log(eligibleForLoans); // true
-
-// or another example
-
-// let highIncome = false;
-// let goodCreditScore = true;
-
-// let eligibleForLoans = highIncome && goodCreditScore;
-
-// console.log(eligibleForLoans); // true
+// Falsy Values in Js
+// Falsy values are values that evaluate to false in a boolean context.
+// In JS, the following values are considered Falsy:
+// false
+// undefined
+// null
+// 0
+// ' '
+// NaN (Not a number)
 
 
-// 3. Logical NOT (!) 
-// This operator negates the value of the operand. If the operand is TRUE, it returns FALSE and vice versa.
+// Truthy Values in Js
+// truthy values are values that evaluate to true in a boolean context.
+// In js, the following values are considered Truthy:
+// true
+// any non-empty string (eg: 'pooja', '0', 'false')
+// any non-zero number (eg: 1, -1, 3.14)
 
-let highIncome = false;
-let goodCreditScore = false;
-let eligibleForLoans = highIncome || goodCreditScore;
-console.log('Eligible', eligibleForLoans); // false
+// Short-circuiting
+// It is a feature of logical operators where the second operand is not evaluated if the first operand is sufficient to determine the result
 
-// Not (!)
-let applicationRefused = !eligibleForLoans;
-console.log('Application Refused', applicationRefused); // true
+false || 1 || 2; // 1
+
+// eg: Let's imagine we are building an application and somewhere the user has to pick a color or we're going to use a default color
+
+// let userColor = 'red';
+// let defaultColor = 'blue'
+// let currentColor = userColor || defaultColor;
+
+// console.log(currentColor); // red
+
+let userColor = null;;
+let defaultColor = 'blue'
+let currentColor = userColor || defaultColor;
+
+console.log(currentColor); // blue
+
+
+
+
+
+
 
 
 
