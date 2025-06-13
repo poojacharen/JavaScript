@@ -6,55 +6,35 @@
 // Different kinds of operators
 // Arithmetic Operators, Assignment Operators, Comparison Operators, Logical Operators, Bitwise Operators 
 
-// Logical Operators with Non - Boolean Values
+// 6. Bitwise Operators
+// They are used to perform operations on binary numbers
 
-false || true; // true
-false || 'Pooja'; // 'Pooja'
-false || 1; // 1 
+// 00000001 // 1
+// 00000010 // 2
 
-// Falsy Values in Js
-// Falsy values are values that evaluate to false in a boolean context.
-// In JS, the following values are considered Falsy:
-// false
-// undefined
-// null
-// 0
-// ' '
-// NaN (Not a number)
+// Bitwise AND (&)
+// The bitwise AND operator (&) compares each bit of two numbers and returns a new number
+// with bits set to 1 only where both numbers had their bits set to 1.
 
+let a = 5; // 00000101
+let b = 3; // 00000011
+let c = a & b; // 00000001
 
-// Truthy Values in Js
-// truthy values are values that evaluate to true in a boolean context.
-// In js, the following values are considered Truthy:
-// true
-// any non-empty string (eg: 'pooja', '0', 'false')
-// any non-zero number (eg: 1, -1, 3.14)
+console.log(c); // 1
 
-// Short-circuiting
-// It is a feature of logical operators where the second operand is not evaluated if the first operand is sufficient to determine the result
+// Bitwise OR (|)
+// This operator compares each bit of two numbers and returns a new number
+// with bits set to 1 where at least one of the numbers had its bit set to 1
 
-false || 1 || 2; // 1
+let d = 5; // 00000101
+let e = 3; // 00000011
+let f = a | b; // 00000111
 
-// eg: Let's imagine we are building an application and somewhere the user has to pick a color or we're going to use a default color
-
-// let userColor = 'red';
-// let defaultColor = 'blue'
-// let currentColor = userColor || defaultColor;
-
-// console.log(currentColor); // red
-
-let userColor = null;;
-let defaultColor = 'blue'
-let currentColor = userColor || defaultColor;
-
-console.log(currentColor); // blue
+console.log(f); // 7
 
 
 
-
-
-
-
+// Note : refer codewithmosh course for more details on bitwise operators 
 
 
 
