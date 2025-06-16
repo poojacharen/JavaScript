@@ -2,18 +2,21 @@
 
 // Loops : repeat an action for no. of times
 
-// For...of
+// Break and Continue
 
-for (variable of iterable) {
-  // code block to be executed
+let i = 0;
+while (i <= 10) {
+    if (i === 5) break;
+    if (i % 2 === 0) {
+        i++;
+        continue;
+    }
+
+    console.log(i);
+    i++;
 }
 
-const colors = ['red', 'blue', 'black'];
-
-for (let color of colors)
-    console.log(color);
-
-
+// We use 'break' keyword to jump out of the loop and use 'continue' keyword we jump to the next iteration
 
 
 
