@@ -1,41 +1,37 @@
-// Control flow
+// Control flow:
 
-// There are two types of conditions
-// if...else
-// switch...case
+// Loops : repeat an action for no. of times
 
-// switch...case
+// For Loop
 
-swith (expression) {
-    case value1:
-        break;
-    case value2:
-        break;
-    default:
+for (initialization; condition; afterthought) {
 
 }
 
-let role;  // We get output as Unknown user but if we declare a value with a variable like (let role = guest) then the op will be Guest User
+for (let i = 0; i < 5; i++) {
+    console.log("Hello World");
+} // output : 5 hello world
 
-switch (role) {
-    case "guest":
-        console.log("Guest User");
-        break;
-    
-    case "moderator":
-        console.log("Moderator User");
-        break;
 
-    default:
-        console.log("Unknown User")
+for (let i = 0; i < 5; i++) {
+     console.log("Hello World", i);
+} // output : Hello world 0 .....Hello world 4
 
-}
 
-// Using if...else with the above condition
 
-if (role === "guest") console.log("Guest User");
-else if (role === "moderator") console.log("Moderator User");
-else console.log("Unknown User");
+for (let i = 1; i <= 5; i++) {
+     console.log("Hello World", i);
+} // Output : Hello world 1 ... Hello world 5
+
+
+for (let i = 1; i <= 5; i++) {
+    if (i % 2 !== 0) console.log(i);
+} // output : 1 3 5 ( we get the odd numbers)
+
+for (let i = 5; i >= 1; i--) {
+    if (i % 2 !== 0) console.log(i);
+} // Output : 5 3 1 ( we get odd numbers in reverse order)
+
 
 
 
