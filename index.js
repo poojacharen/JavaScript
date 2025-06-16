@@ -2,36 +2,28 @@
 
 // Loops : repeat an action for no. of times
 
-// Infinite Loops
+// For...in
 
-while (true) {
-    // Code to be executed repeatedly
+for (const key in object) {
+  // code to be executed for each key
 }
 
-// while loop
-let i = 0;
-while (i < 5) {
-    console.log(i);
-    // i++;
-} // output : it will run infinite times 0 because as we dint add i++
+// eg : 1
+const person = {
+    name: 'Pooja',
+    age: 29
+};
+
+for (let key in person)
+    console.log(key, person[key]);
 
 
-// using infinite loops syntax
+// eg : 2
 
-while (true) {
+const colors = ['red', 'blue', green];
 
-} // output : run infinitely
-
-// do...while loop
-
-let x = 0;
-do {
-    // x++;
-} while (x < 5); // output: runs infinetely as we didn't add x++
-
-// for loop
-
-for (let i = 0; i < 10;) // output runs infinetely as we didn't add i ++
+for (let index in colors)
+    console.log(index, colors[index]);
 
 
 
