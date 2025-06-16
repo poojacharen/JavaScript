@@ -4,35 +4,38 @@
 // if...else
 // switch...case
 
-// if...else
+// switch...case
 
-if (condition) {
-    statement
+swith (expression) {
+    case value1:
+        break;
+    case value2:
+        break;
+    default:
+
 }
-else if (anotherCondition) {
-    statement
+
+let role;  // We get output as Unknown user but if we declare a value with a variable like (let role = guest) then the op will be Guest User
+
+switch (role) {
+    case "guest":
+        console.log("Guest User");
+        break;
+    
+    case "moderator":
+        console.log("Moderator User");
+        break;
+
+    default:
+        console.log("Unknown User")
+
 }
-else if (yetAnotherCondition) 
-    statement
-else
-    statement
 
+// Using if...else with the above condition
 
-// Hour
-// If hour is between 6am and 12pm: Good Morning!
-// If it is between 12pm and 6pm: Good Afternoon!
-// Otherwise: Good Evevning!
-
-let hour = 14;  // we can change the number to see which day of the time we are in (morn, aftrnoon, eve)
-
-if (hour >=6 && hour < 12) {
-    console.log("Good Morning!");
-}
-else if(hour >=12 && hour < 18) {
-    console.log("Good Afternoon!");
-}
-else
-    console.log("Good Evening!");
+if (role === "guest") console.log("Guest User");
+else if (role === "moderator") console.log("Moderator User");
+else console.log("Unknown User");
 
 
 
