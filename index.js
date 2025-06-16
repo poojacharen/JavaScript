@@ -1,23 +1,38 @@
-// Exercise :
+// Control flow
 
-// let a = 'red';
-// let b = 'blue';
+// There are two types of conditions
+// if...else
+// switch...case
 
-// console.log(a); // red
-// console.log(b); // blue
+// if...else
 
-// we need to swap the results to blue and red
+if (condition) {
+    statement
+}
+else if (anotherCondition) {
+    statement
+}
+else if (yetAnotherCondition) 
+    statement
+else
+    statement
 
 
-let a = 'red';
-let b = 'blue';
+// Hour
+// If hour is between 6am and 12pm: Good Morning!
+// If it is between 12pm and 6pm: Good Afternoon!
+// Otherwise: Good Evevning!
 
-let c = a;
-a = b;
-b = c;
+let hour = 14;  // we can change the number to see which day of the time we are in (morn, aftrnoon, eve)
 
-console.log(a);
-console.log(b);
+if (hour >=6 && hour < 12) {
+    console.log("Good Morning!");
+}
+else if(hour >=12 && hour < 18) {
+    console.log("Good Afternoon!");
+}
+else
+    console.log("Good Evening!");
 
 
 
