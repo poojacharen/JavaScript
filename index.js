@@ -2,24 +2,26 @@
 
 // Loops : repeat an action for no. of times
 
-// While Loop
+// Do...while Loop
 
-while (condition) {
+// do {
+  
+// } while (condition);
 
-}
 
-let i = 0;
-
-while (i <= 5) {
+let j = 0;
+do {
     if(i % 2 !== 0) console.log(i);
-    i++
-} // output : 1 3 5 
+    i ++;
+} while(i <= 5); // output 1 3 5
 
 
 
-
-
-
+let i = 9;
+do {
+    if(i % 2 !== 0) console.log(i);
+    i ++;
+} while(i <= 5); // output: 9
 
 
 
