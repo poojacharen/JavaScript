@@ -2,28 +2,17 @@
 
 // Loops : repeat an action for no. of times
 
-// For...in
+// For...of
 
-for (const key in object) {
-  // code to be executed for each key
+for (variable of iterable) {
+  // code block to be executed
 }
 
-// eg : 1
-const person = {
-    name: 'Pooja',
-    age: 29
-};
+const colors = ['red', 'blue', 'black'];
 
-for (let key in person)
-    console.log(key, person[key]);
+for (let color of colors)
+    console.log(color);
 
-
-// eg : 2
-
-const colors = ['red', 'blue', green];
-
-for (let index in colors)
-    console.log(index, colors[index]);
 
 
 
