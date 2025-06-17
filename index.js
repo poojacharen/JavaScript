@@ -1,31 +1,27 @@
 // Exercise
 
-// Speed Limit = 70 - ok 
-// speed increases by 5km  -> 1 point
-// Math.floor(1.3)
-// when they reach 12 points -> license get suspended
+// Write a function showNumbers that takes a parameter called 'limit'. Should display 'even' if its a even number and 'odd'
+// if its a odd number
+// expected output : 0 "EVEN"
+//                   1 "ODD" ...... 10 "EVEN"
 
-let speed = checkSpeed(200);
-console.log(speed);
 
-function checkSpeed(speed) {
-    const speedLimit = 70;
-    const kmPerPoint = 5;
+showNumbers(10);
 
-    if (speed < speedLimit + kmPerPoint) {
-        
-        console.log('Ok');
+function showNumbers(limit) {
+    for(let i = 0; i <= limit; i++) {
+        if (i % 2 === 0)
+            console.log(i, "EVEN");
+        else
+            console.log(i, "ODD");
+
+
+        const message = (i % 2 === 0) ? 'EVEN' : 'ODD'
+        console.log(i, message);
+    
     }
 
-    const points = Math.floor((speed - speedLimit) / kmPerPoint);
-        
-    if (points >= 12)
-            console.log('License Suspended');
-        
-    else
-            console.log('Points', points);
-    }
-
+}
 
 
 
