@@ -1,33 +1,31 @@
 // Exercise
 
-// FizzBuzz
+// Speed Limit = 70 - ok 
+// speed increases by 5km  -> 1 point
+// Math.floor(1.3)
+// when they reach 12 points -> license get suspended
 
-// Write a function called fizzbuzz algorithm where we give an input and it returns a string
+let speed = checkSpeed(200);
+console.log(speed);
 
-// Divisible by 3 => Fizz
-// Divisible by 5 => Buzz
-// Divisible by both 3 and 5 => FizzBuzz
-// Not divisible by 3 or 5 => input
-// Not a number => 'Not a number'
+function checkSpeed(speed) {
+    const speedLimit = 70;
+    const kmPerPoint = 5;
+
+    if (speed < speedLimit + kmPerPoint) {
+        
+        console.log('Ok');
+    }
+
+    const points = Math.floor((speed - speedLimit) / kmPerPoint);
+        
+    if (points >= 12)
+            console.log('License Suspended');
+        
+    else
+            console.log('Points', points);
+    }
 
 
-const output = fizzBuzz(15);
-console.log(output);
 
-function fizzBuzz(input) {
-    if ((input % 3 === 0) && (input % 5 === 0))
-        return 'FizzBuzz';
-    
-    if (input % 3 === 0)
-        return 'Fizz';
 
-    if (input % 5 === 0) 
-        return 'Buzz';
-
-    
-    if(typeof input !== 'number')
-        return 'Not a number';
-
-    return input;
-
-}
