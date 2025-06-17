@@ -1,17 +1,22 @@
 // Exercise
 
-// Write a function called countTruthy which takes an array and returns a number of truthy elements in this array
+// String Properties
+// Create a function called showProperties. We pass an object and we should diplay all the properties of this object that are
+// of type string
 
 
-const array = ["Pooja", "Charen", "Sai"];
+const movie = {
+    title: "Bahubali",
+    releaseYear: 2018,
+    rating: 5.0,
+    director: "S.S.Rajamouli"
+};
 
-console.log(countTruthy(array));
+showProperties(movie);
 
-function countTruthy(array) {
-    let count = 0;
-    for (let value of array)
-        if (value)
-            count++;
-        return count;
-
+function showProperties(object) {
+    for (let key in object) {
+        if (typeof object[key] === 'string')
+            console.log(key, object[key]);
+    }
 }
