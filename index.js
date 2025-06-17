@@ -1,22 +1,42 @@
 // Exercise
 
-// Sum of multiples of 3 and 5
-// Create a function called sum, we give it a limit and this function will return the sum of all the multiples of
-// 3 and 5 from 0 upto to the given limit
-
-// Multiples of 3 : 3, 6, 9
-// Multiples of 5 : 5, 10
+// Grade
+// Calculate the grade of a student. There is different marks of a student and we pass this array in a function called
+// calculateGrade. 
 
 
-console.log(sum(10));
+const marks = [80, 80, 50];
 
-function sum(limit) {
+// Average = 70
+// 1-59: F
+// 60-69: D
+// 70-79: C
+// 80-89: B
+// 90-100: A
+
+
+console.log(calculateGrade(marks));
+
+function calculateGrade(marks) {
+    const average = calculateAverage(marks);
+
+    if (average >= 0 && average <= 59) 
+        return 'F';
+    if (average >= 60 && average <= 69)
+        return 'D';
+    if (average >= 70 && average <= 79)
+        return 'C';
+     if (average >= 80 && average <= 89)
+        return 'B';
+     if (average >= 90 && average <= 100)
+        return 'A';
+
+
+}
+
+function calculateAverage(array) {
     let sum = 0;
-    for(let i = 0; i <= limit; i++) 
-        if (i % 3 === 0 || i % 5 === 0)
-            sum += i;
-
-    return sum;
-       
-    
+    for (let value of array)
+        sum += value;
+    return sum / array.length;
 }
