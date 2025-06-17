@@ -1,20 +1,14 @@
 // Exercise
 
-// Write a function that takes two numbers and returns the maximum of two
+// Write a function that two parameters which is width and height of an image and returns true if the image is landscape otherwise false
 
-let number = max(10, 15);
-console.log(number)
 
-function max(a, b) {
-    if (a > b) return a;
-    
-    return b;
+
+console.log(isLandscape(250, 300));
+
+function isLandscape(width, height) {
+    return (width > height) ? true : false;
 }
 
 
-// or 
-
-function max(a, b) {
-    return (a > b) ? a : b;
-}
 
