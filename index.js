@@ -1,22 +1,26 @@
-// Control flow:
+// Exercise
 
-// Loops : repeat an action for no. of times
+// Write a function that takes two numbers and returns the maximum of two
 
-// Break and Continue
+let number = max(10, 15);
+console.log(number)
 
-let i = 0;
-while (i <= 10) {
-    if (i === 5) break;
-    if (i % 2 === 0) {
-        i++;
-        continue;
-    }
-
-    console.log(i);
-    i++;
+function max(a, b) {
+    if (a > b) return a;
+    
+    return b;
 }
 
-// We use 'break' keyword to jump out of the loop and use 'continue' keyword we jump to the next iteration
+
+// or 
+
+function max(a, b) {
+    return (a > b) ? a : b;
+}
+
+
+
+
 
 
 
