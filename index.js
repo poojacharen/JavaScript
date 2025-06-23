@@ -1,7 +1,7 @@
 // Exercise
 
 // Prime Numbers
-// Create a function called showPrimes, that takes a limit and shows all the prime numbers up to this limit. 
+// Create a function called showPrimes, that takes a limit and shows all the prime numbers up to this limit.
 
 // Prime (whose factors are only 1 and itself)
 // coposite
