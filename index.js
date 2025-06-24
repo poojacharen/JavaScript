@@ -1,28 +1,18 @@
 // Objects
 
-// Constructor Functions
-// They are used to create objects with a specific structure and behavior.
-// They can be used to create multiple instances of an object with the same properties and methods.
-// Use pascal notation for constructor function names.
+// Dynamic Nature of Objects
+// Objects in JavaScript are dynamic, meaning you can add, modify, or delete properties at
+// any time. This flexibility allows for a wide range of programming styles and patterns.
 
-function Circle(radius) 
-{
-    this.radius = radius;
-    this.draw = function() {
-        console.log('draw');
-    }
-}
 
-const circle = new Circle(1);
+const circle = {
+    radius: 1
+};
 
-// Difference between Factory Functions and Constructor Functions:
+circle.color = 'yellow'; // Adding a new property 'color' to the circle object
+circle.draw = function() {} // Adding a new method 'draw' to the circle object
 
-// Factory Functions:
-// They are regular functions that return an object
-// They can return different objects based on the input parameters
-// They can have any name, but it is common to use camelCase notation
+delete circle.color;
+delete circle.draw;
 
-// Constructor Functions:
-// They are special functions that are used with the new keyword
-// They always return a new object, even if you don't explicitly return one
-// They should be named using PascalCase notation
+console.log(circle);
