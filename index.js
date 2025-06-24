@@ -1,12 +1,21 @@
 // Objects
 
-// String
+// Template Literals :
+// They are powerful and flexible, allowing for easy string interpolation and multi-line strings.
+// They are enclosed by backticks (``) instead of single or double quotes.
+// They can contain placeholders, which are indicated by the dollar sign and curly braces ${expression}
 
-// String Primitive
-const message = 'This is my first message';
+const name = 'Pooja';
+const message = 'Hi ' + name + ',\n';
 
-// String Object
-const another = new String('hi');
+// Using template literals
 
+const another =
+`Hi ${name} ${2 + 3},
 
-// Note: refer mosh and also google for more
+Thank you for joining the team.
+
+Regards,
+Pooja`;
+
+console.log(another);
