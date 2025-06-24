@@ -1,25 +1,21 @@
 // Objects
 
-// Constructor Property
-// The constructor property of an object is a reference to the function that created the instance's prototype.
-// It is a way to access the constructor function that was used to create the object.
-// This property is automatically set when an object is created using a cnstructor function or a class.
+// Functions are Objects :
+// Functions are first-class objects in JS. 
+// They can be assigned to variables, passed as arguments and returned from other functions and can have properties
+// Functions are objects, so they can have properties and methods just like any other object in JS
 
 
-// Example: 
-
-new String(); // '', "", ``
-new Boolean(); // true, false
-new Number(); // 1, 2, 3...
-
-// Example of constructor property
-
-function Person(name) {
-    this.name = name;
-    this.age = 0;
+ function Circle(radius) {
+    this.radius = radius;
+    this.draw = function() {
+        console.log('draw');
     }
+ }
 
-    const person = new Person('Pooja');
-    console.log(person.constructor); // [Function: Person]
+ Circle.call({}, 1);
+ Circle.apply({}, [1,2,3]);
+
+ const another = new Circle(1);
  
-    
+
