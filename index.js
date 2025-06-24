@@ -1,18 +1,25 @@
 // Objects
 
-// Dynamic Nature of Objects
-// Objects in JavaScript are dynamic, meaning you can add, modify, or delete properties at
-// any time. This flexibility allows for a wide range of programming styles and patterns.
+// Constructor Property
+// The constructor property of an object is a reference to the function that created the instance's prototype.
+// It is a way to access the constructor function that was used to create the object.
+// This property is automatically set when an object is created using a cnstructor function or a class.
 
 
-const circle = {
-    radius: 1
-};
+// Example: 
 
-circle.color = 'yellow'; // Adding a new property 'color' to the circle object
-circle.draw = function() {} // Adding a new method 'draw' to the circle object
+new String(); // '', "", ``
+new Boolean(); // true, false
+new Number(); // 1, 2, 3...
 
-delete circle.color;
-delete circle.draw;
+// Example of constructor property
 
-console.log(circle);
+function Person(name) {
+    this.name = name;
+    this.age = 0;
+    }
+
+    const person = new Person('Pooja');
+    console.log(person.constructor); // [Function: Person]
+ 
+    
