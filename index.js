@@ -1,21 +1,11 @@
 // Objects
 
-// Template Literals :
-// They are powerful and flexible, allowing for easy string interpolation and multi-line strings.
-// They are enclosed by backticks (``) instead of single or double quotes.
-// They can contain placeholders, which are indicated by the dollar sign and curly braces ${expression}
+// Date :
 
-const name = 'Pooja';
-const message = 'Hi ' + name + ',\n';
 
-// Using template literals
+const now = new Date();
+const date1 = new date('May 11 2018 09:00');
+const date2 = new Date(2018, 4, 11, 9);
 
-const another =
-`Hi ${name} ${2 + 3},
+now.setFullYear(2019);
 
-Thank you for joining the team.
-
-Regards,
-Pooja`;
-
-console.log(another);
