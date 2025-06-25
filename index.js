@@ -1,28 +1,26 @@
-// Exercise - 3 : Object Equality
+// Exercise - 4 : Blog Post Object
 
-// Create two address objects
+// Create a blog post object with these properties -
+// Title, body, author, views : which represents the number of times this post has been viewed, 
+// comments : each comment should have a couple of properties (author, body)
+// isLive that can be either true or false
+// We should use the object literal syntax to create and initialize a blog post. 
+// GIve each property some value, the actual value doesn't really matter
 
-let address1 = new UpdateAddress('Rahman', 'Chennai', 600107);
-let address2 = new UpdateAddress('Rahman', 'Chennai', 600107);
 
+// Object Literal Syntax
 
-// Constructor Function
+const blog = {
+    title: 'Pooja',
+    body: 'Hello this is my blog post',
+    author: 'Pooja Raju',
+    views: 5,
+    comments: [
+        { author: 'a', body: 'b'},
+        { author: 'c', body: 'd'},
+    ],
+    isLive: true
+};
 
-function UpdateAddress(street, city, zipCode) {
-    this.street = street;
-    this.city = city;
-    this.zipCode = zipCode;
-}
+console.log(blog);
 
-function areEqual(address1, address2) {
-  return address1.street === address2.street &&
-        address1.city === address2.city &&
-        address1.zipCode === address2.zipCode;
-}
-
-function areSame(address1, address2) {
-    return address1 === address2;
-}
-
-console.log(areEqual(address1, address2));
-console.log(areSame(address1, address2));
