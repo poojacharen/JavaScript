@@ -1,27 +1,9 @@
-// Exercise - 2 : Factory and Constructor Functions
+// Exercise - 3 : Object Equality
 
-// Initialize an address object, first using a factory function and then using a constructor function. 
-// We need to write two different functions for this exercise 
+// Create two address objects
 
-
-let address = {
-    street: 'Rahman',
-    city: 'Chennai',
-    zipCode: 600107
-};
-
-console.log(address);
-
-
-// Factory Function
-
-function createAddress(street, city, zipCode) {
-    return {
-        street,
-        city,
-        zipCode
-    };
-}
+let address1 = new UpdateAddress('Rahman', 'Chennai', 600107);
+let address2 = new UpdateAddress('Rahman', 'Chennai', 600107);
 
 
 // Constructor Function
@@ -30,5 +12,17 @@ function UpdateAddress(street, city, zipCode) {
     this.street = street;
     this.city = city;
     this.zipCode = zipCode;
-  
 }
+
+function areEqual(address1, address2) {
+  return address1.street === address2.street &&
+        address1.city === address2.city &&
+        address1.zipCode === address2.zipCode;
+}
+
+function areSame(address1, address2) {
+    return address1 === address2;
+}
+
+console.log(areEqual(address1, address2));
+console.log(areSame(address1, address2));
