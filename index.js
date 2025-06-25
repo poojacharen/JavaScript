@@ -1,11 +1,20 @@
-// Objects
+// Exercise - 1 : Address Object
 
-// Date :
+// Create an address object with three properties : 
+// street, city and zipCode. When doing it create a function called showAddress that takes an address object and displays all 
+// the properties in this object along with their value
 
 
-const now = new Date();
-const date1 = new date('May 11 2018 09:00');
-const date2 = new Date(2018, 4, 11, 9);
 
-now.setFullYear(2019);
+let address = {
+    street: 'Rahman',
+    city: 'Chennai',
+    zipCode: 600107
+};
 
+function showAddress(address) {
+    for (let key in address)
+        console.log(key, address[key]);
+}
+
+showAddress(address);
