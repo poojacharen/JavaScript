@@ -1,29 +1,13 @@
-// Exercise - 5 : Constructor Function
+// Exercise - 6 : Price Range Object
 
-// Use a constructor function to create a post object. 
+// Create an array of objects. Each object is what we call a price range object.
 
+let priceRanges = [
+    { label: '$', tooltip: 'Inexpensive', minPerPerson: 0, maxPerPerson: 10 },
+    { label: '$$', tooltip: 'Moderate', minPerPerson: 11, maxPerPerson: 20 },
+    { label: '$$$', tooltip: 'Expensive', minPerPerson: 21, maxPerPerson: 50 },
+];
 
-// const blog = {
-//     title: 'Pooja',
-//     body: 'Hello this is my blog post',
-//     author: 'Pooja Raju',
-//     views: 5,
-//     comments: [
-//         { author: 'a', body: 'b'},
-//         { author: 'c', body: 'd'},
-//     ],
-//     isLive: true
-// };
-
-let blog = new Post('Pooja', 'Hi this my blog page', 'Pooja Raju');
-console.log(blog);
-
-
-function Post(title, body, author) {
-    this.title = title;
-    this.body = body;
-    this.author = author;
-    this.views = 0;
-    this.comments = [];
-    this.isLive = false;
-}
+let restaurants = [
+    {averagePerPerson: 5 }
+]
