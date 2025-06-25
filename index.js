@@ -1,9 +1,7 @@
-// Exercise - 1 : Address Object
+// Exercise - 2 : Factory and Constructor Functions
 
-// Create an address object with three properties : 
-// street, city and zipCode. When doing it create a function called showAddress that takes an address object and displays all 
-// the properties in this object along with their value
-
+// Initialize an address object, first using a factory function and then using a constructor function. 
+// We need to write two different functions for this exercise 
 
 
 let address = {
@@ -12,9 +10,25 @@ let address = {
     zipCode: 600107
 };
 
-function showAddress(address) {
-    for (let key in address)
-        console.log(key, address[key]);
+console.log(address);
+
+
+// Factory Function
+
+function createAddress(street, city, zipCode) {
+    return {
+        street,
+        city,
+        zipCode
+    };
 }
 
-showAddress(address);
+
+// Constructor Function
+
+function UpdateAddress(street, city, zipCode) {
+    this.street = street;
+    this.city = city;
+    this.zipCode = zipCode;
+  
+}
