@@ -3,36 +3,24 @@
 // It is a collection of items stored at contiguous memory locations.
 
 
-// Combining and Slicing Arrays :
-// The concat() method is used to join two or more arrays.
-// It returns a new array without modifying the existing arrays
+// The Spread Operator :
+// The spread operator (...) allows an iterable such as an array or string to be expanded in places where zero or more arguments are expected.
+// It is used to unpack elements from an array or properties from an object.
+// It can also be used to combine arrays or objects.
+// The spread operator is useful for copying arrays, merging arrays and passing arrays as function arguments.
 
 
 const first = [1, 2, 3];
 const second = [4, 5, 6];
 
-const combined = first.concat(second);
+// const combined = first.concat(second);
+const combined = [...first, ...second]; // Using spread operator to combine arrays
 console.log(combined); // [1, 2, 3, 4, 5, 6]
 
-const slice = combined.slice(2, 4);
-console.log(slice); // [3, 4]
+const combined = [...first, 'a', ...second, 'b']; // Adding elements while combining
+console.log(combined); // [1, 2, 3, 'a', 4, 5, 6, 'b']
 
-const slice = combined.slice();
-console.log(slice); // [1, 2, 3, 4, 5, 6]
-
-
-// If we hae reference types 
-
-const first1 = [{ id: 1 }];
-const second1 = [4, 5, 6];
-
-const combined = first.concat(second1);
-first[0].id = 10;
-console.log(combined); // [{ id: 10 }, 4, 5, 6]
-
-const slice = combined.slice();
-console.log(slice); // [{ id: 10 }, 4, 5, 6]
-
-const slice = combined.slice(2, 4);
-console.log(slice); // [5, 6]
+// const copy = combined.slice();
+const copy = [...combined]; // using spread operator to copy an array
+console.log(copy); // [1, 2, 3, 'a', 4, 5, 6, 'b'] 
 
