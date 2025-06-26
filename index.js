@@ -1,17 +1,15 @@
-// Exercise 1 : Array from Range
+// Exercise 2 : Includes
 
-// Write a function called arrayFromRange. 
-// This function should take two parameters - min and max
+const numbers = [1, 2, 3, 4];
 
-const numbers = arrayFromRange(-10, -4);
+console.log(numbers.includes(1));
 
-console.log(numbers);
+function includes(array, searchElement) {
+    for (let element of array) {
+        if (element === searchElement)
+            return true;
+    return false;
+    }
 
-function arrayFromRange(min, max) {
-    const output = [];
-    for(let i = min; i <= max; i++) 
-        output.push(i);
-    return output;
-    
 }
 
