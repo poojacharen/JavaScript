@@ -3,19 +3,27 @@
 // It is a collection of items stored at contiguous memory locations.
 
 
-// Arrow Functions :
-// Arrow functions are a more concise syntax for writing function expressions in JS.
-// They are anonymous and change the way this binds in functions.
-// They do not their own context, so they cannot be used as constructors.
-// They are not hoisted, so they cannot be called before they are defined.
+// Removing Elements :
+// It is possible to remove elements from an array using the splice() method.
 
+const numbers = [1, 2, 3, 4];
 
-const courses = [
-    { id: 1, name: 'JavaScript' },
-    { id: 2, name: 'Azure' },
-];
+// End
 
-const course = courses.find(course => course.name === 'JavaScript');
+const last = numbers.pop(); // removes the last element
+console.log(numbers); // [1, 2, 3]
+console.log(last); // 4
 
-console.log(course); // { id: 1, name: 'JavaScript' }
+// Beginning 
 
+const first = numbers.shift(); // removes the first element
+console.log(nunbers); // [2, 3, 4]
+console.log(first); // 1
+
+// Middle 
+
+numbers.splice(2, 1); // removes the elemnt at index 2 
+console.log(numbers); // [1, 2, 4]
+
+numbers.splice(2, 2);
+console.log(numbers); // [1, 2]
