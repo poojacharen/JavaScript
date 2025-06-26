@@ -2,27 +2,30 @@
 // An array is a special variable, which can hold more than one value at a time.
 // It is a collection of items stored at contiguous memory locations.
 
-// Adding Elements 
 
-const numbers = [3, 4];
+// Finding Elements (Primitive Types):
+// It really depends what we store in an array wheteher it's a primitive or reference type.
 
-// End of the array
-// This method adds one or more elements to the end of an array and returns the new length of the array.
+const numbers = [1, 2, 3, 1, 4];
 
-numbers.push(5, 6);
+// The indexOf() method : returns the first index at which a given element can be found in the array,
+// or -1 if it is not present.
 
-console.log(numbers); // [3, 4, 5, 6]
+console.log(numbers.indexOf(1)); // 0
+console.log(numbers.indexOf(5)); // -1
+console.log(numbers.indexOf(1, 2)); // 3 // this will start searching from index 2 and return the first occurrence of 1 after that index 
 
-// Beginning of the array
-// This method ads one or more elements to the beginning of n array and returns the new length of the array.
 
-numbers.unshift(1, 2);
 
-console.log(numbers); // [1, 2, 3, 4, 5, 6]
+// The lastIndexOf() method : returns the last index at which a given element can be found in the array,
+// or -1 if it is not present.
 
-// Middle of the array
-// This method adds one or more elements at a specified index in an array and returns the new length of the array.
+console.log(numbers.lastIndexOf(1)); // 3
+console.log(numbers.lastIndexOf(5)); // -1
+console.log(numbers.lastIndexOf(1) !== -1); // true
 
-numbers.splice(2, 0, 'a', 'b'); // we added 'a' and 'b' at index 2, ie., between 2 and 3 (here 2 is the index of 3)
+// The includes() method : determines whether an array includes a certain value among its entries,
+// returning true or false as appropriate.
 
-console.log(numbers); // [1, 2, 'a', 'b', 3, 4, 5, 6]
+console.log(numbers.includes(1)); // true
+
