@@ -1,23 +1,22 @@
-// Exercise 5 : Count Occurrences
+// Exercise 6 : Get Max
 
-const numbers = [1, 2, 3, 4, 1];
+const numbers = [1, 2, 3, 4];
 
-const count = countOccurrences(numbers, -1);
+const max = getMax(1, 2, 2, 1, 3);
 
-console.log(count);
+console.log(max);
 
-function countOccurrences(array, searchElement) {
-    // let ccount = 0;
-    // for (let element of array)
-    //  if (element === searchElement)
-    //      count++;
-    // return count;
+function getMax(array) {
+    if (array.length === 0) return undefined;
 
-    array.reduce((accumulator, current) => {
-        const occurrence = (current === searchElement) ? 1 : 0;
-        console.log(accumulator, current, searchElement);
-        return accumulator + occurrence
-    }, 0);
+    // let max = array[0];
+
+    // for (let i = 1; i < array.length; i++)
+    //     if (array[i] > max)
+    //         max = array[i];
+
+    // return max;  // 3
+    return array.reduce((a, b) => (a > b) ? a: b);
 
 }
 
