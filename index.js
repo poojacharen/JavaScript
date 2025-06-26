@@ -3,32 +3,27 @@
 // It is a collection of items stored at contiguous memory locations.
 
 
-// Mapping an Array :
-// An array can be mapped to a new array by applying a function to each element of the original array.
-// This is done using the 'map' method.
+// Reducing an Array :
+// The reduce() method executes a reducer function (that you provide) on each element of the array, resulting in a single output value.
+// The reduce() method executes the callback function once for each element present in the array, excluding holes in the array.
+// The return value of the function is stored in the accumulator. 
+
 
 const numbers = [1, -1, 2, 3];
 
-// Mapping an element with strings 
+// a = 0, c = 1 => a = 1
+// a = 1, c = -1 => a = 0
+// a = 0, c = 2 => a = 2
+// a = 2, c = 3 => a = 5
 
-const filtered = numbers.filter(n => n >= 0);
+// a = 1, c = -1 => a = 0
+// a = 0, c = 2 => a = 2
+// a = 2, c = 3 => a = 5
 
-const items = filtered.map(n => '<li>' + n + '<li>');
+const sum = numbers.reduce(
+    (accumulator, currentValue) => accumulator + currentValue
+);
 
-const html = '<ul>' + items.join('') + '</ul>';
-
-console.log(html); // <ul><li>1<li><li>2<li><li>3<li></ul>
-
-
-// Mapping an element with objects
-// The below method is called chaining, where we can apply multiple methods on the same array.
-
-const items = numbers
-    .filter(n => n >= 0)
-    .map(n => ({ value: n }))
-    .filter(obj => obj.value > 1)
-    .map(obj => obj.value);
-
-console.log(items) ; // [2, 3]
+console.log(sum); // 5
 
 
