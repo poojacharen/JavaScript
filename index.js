@@ -3,45 +3,33 @@
 // It is a collection of items stored at contiguous memory locations.
 
 
-// Sorting Arrays :
-// The sort() method sorts the elements of an array in place and returns the sorted array.
-// The default sort order is according to string Unicode code points.
-// The sort() method can take a compare function as an argument to ddfine the sort order.
-// The compare functions should return a negative, zero or positive value, depending on the arguments.
+// Testing the Elements of an Array :
+// The length property of an array returns the number pf elements in the array.
+// The index of the first element is 0, the second element is 1 and so on...
+// The last element of an array can be accessed using the length property minus one.
+// The index of the last element is length - 1
 
-// eg: the below is when we have numbers and strings in an array
+const numbers = [1, 2, 3];
 
-const numbers = [2, 3, 1];
-numbers.sort(); // sorts the elements of an array in place and returns the sorted array
-console.log(numbers); // [1, 2, 3]
+// Every : It checks to see if every element in a given array matches the given criteria
+// It returns true if all elements match the criteria, otherwise false
 
-numbers.reverse(); // reverses the order of the elements in an array
-console.log(numbers); // [3, 2, 1]
-
-
-// eg : the below is when we have objects in an array
-// This is a common scenario when dealing with arrays of objects, such as when you have a list of courses and you want to sort them by name.
-// 
-
-const courses = [
-    { id: 1, name: 'Python' },
-    { id: 2, name: 'JavaScript' },
-];
-
-courses.sort(function(a, b) {
-    // a < b => -1
-    // a > b => 1
-    // a === b => 0
-
-    const nameA = a.name.toLowerCase(); // 
-    const nameB = b.name.toLowerCase();
-
-    if (nameA < nameB) return -1;
-    if (nameA > nameB) return 1;
-    return 0;
+const allPositive = numbers.every(function(value) {
+    return value >= 0;
 });
 
-console.log(courses); // [{ id: 2, name: 'JavaScript' }, { id: 1, name: 'Python' }]
+console.log(allPositive); // true
+
+
+// Some : It chceks to see if we have at least one element that matches the given criteria
+// It returns true if at least one element matches the criteria, otherwise false
+
+const atLeastOnePositive = numbers.some(function(value) {
+    return value >= 0;
+});
+
+console.log(atLeastOnePositive); // true
+
 
 
 
