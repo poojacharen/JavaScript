@@ -3,33 +3,17 @@
 // It is a collection of items stored at contiguous memory locations.
 
 
-// Testing the Elements of an Array :
-// The length property of an array returns the number pf elements in the array.
-// The index of the first element is 0, the second element is 1 and so on...
-// The last element of an array can be accessed using the length property minus one.
-// The index of the last element is length - 1
+// Filtering an Array : It is based on the search criteria
+// The filter() method creates a new array with all elements that pass the test implemented by the provided function.
+// This method returns a new array, and does not change the original array.
+// Syntax : 
+// array.filter(callback(element[, index[, array]])[, thisArg])
 
-const numbers = [1, 2, 3];
+const numbers = [1, -1, 2, 3];
 
-// Every : It checks to see if every element in a given array matches the given criteria
-// It returns true if all elements match the criteria, otherwise false
+const filtered = numbers.filter(n => n >= 0);
 
-const allPositive = numbers.every(function(value) {
-    return value >= 0;
-});
-
-console.log(allPositive); // true
-
-
-// Some : It chceks to see if we have at least one element that matches the given criteria
-// It returns true if at least one element matches the criteria, otherwise false
-
-const atLeastOnePositive = numbers.some(function(value) {
-    return value >= 0;
-});
-
-console.log(atLeastOnePositive); // true
-
+console.log(filtered); // [1, 2, 3]
 
 
 
