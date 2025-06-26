@@ -1,22 +1,22 @@
-// Exercise 6 : Get Max
+// Exercise 7 : Movies
 
-const numbers = [1, 2, 3, 4];
 
-const max = getMax(1, 2, 2, 1, 3);
+const movies = [
+    { title: 'a', year: 2018, rating: 4.5 },
+    { title: 'b', year: 2018, rating: 4.4 },
+    { title: 'c', year: 2018, rating: 4.2 },
+    { title: 'd', year: 2021, rating: 4.0 },
+];
 
-console.log(max);
+// All the movies in 2018 with rating > 4
+// Sort them by their rating
+// Descending Order
+// Pick their title
 
-function getMax(array) {
-    if (array.length === 0) return undefined;
+const titles = movies
+    .filter(m => m.year === 2018 && m.rating >=4)
+    .sort((a, b) => a.rating - b.rating)
+    .reverse()
+    .map(m => m.title)
 
-    // let max = array[0];
-
-    // for (let i = 1; i < array.length; i++)
-    //     if (array[i] > max)
-    //         max = array[i];
-
-    // return max;  // 3
-    return array.reduce((a, b) => (a > b) ? a: b);
-
-}
-
+console.log(titles);
