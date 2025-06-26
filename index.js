@@ -3,27 +3,41 @@
 // It is a collection of items stored at contiguous memory locations.
 
 
-// Removing Elements :
-// It is possible to remove elements from an array using the splice() method.
+// Emptying an Array :
+// There are several ways to empty an array in JS
+// 1. Setting the length to 0
+// 2. Reassigning to a new empty array
+// 3. Using splice method
+// 4. Using pop method in a loop
+// 5. Using shift method in a loop
+// 6. Using a filter method to filter out all elements
 
-const numbers = [1, 2, 3, 4];
 
-// End
+let numbers = [1, 2, 3, 4];
+let another = numbers;
 
-const last = numbers.pop(); // removes the last element
-console.log(numbers); // [1, 2, 3]
-console.log(last); // 4
+// Solution 1 : this method is recommended when we have only one reference to the array
+numbers = [];
+console.log(numbers); // []
+console.log(another); // [1, 2, 3, 4]
 
-// Beginning 
+// Solution 2 : This method is also recommended when we have multiple references to the array
 
-const first = numbers.shift(); // removes the first element
-console.log(nunbers); // [2, 3, 4]
-console.log(first); // 1
+numbers.length = 0;
+console.log(numbers); // []
+console.log(another); // [1, 2, 3, 4]
 
-// Middle 
+// Solution 3 
 
-numbers.splice(2, 1); // removes the elemnt at index 2 
-console.log(numbers); // [1, 2, 4]
+numbers.splice(0, numbers.length);
+console.log(numbers); // []
+console.log(another); // [1, 2, 3, 4]
 
-numbers.splice(2, 2);
-console.log(numbers); // [1, 2]
+// Solution 4
+
+while (numbers.length > 0)
+    numbers.pop();
+
+console.log(numbers); // []
+console.log(another); // [1, 2, 3, 4]
+
