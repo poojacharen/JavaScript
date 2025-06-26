@@ -3,19 +3,23 @@
 // It is a collection of items stored at contiguous memory locations.
 
 
-// Iterating an Array
-// The for loop is the most common way to iterate over an array
+// Joining Arrays :
+// The join() method joins all elements of an array into a string.
+// The elements will be separated by a specified separator string.
+// If no separator is specified, a comma (,) is used as the default separator.
 
+// Syntax: array.join(separator);
 
-const numbers = [1, 2, 3];
+const numbers = [1, 2, 3]
+;
+const joined = numbers.join(',');
+console.log(joined); // 1, 2, 3
 
-for (let number of numbers)
-    console.log(number); // 1 // 2 // 3
+const message = 'Hi, How are you?';
+const parts = message.split(' ');
+console.log(parts); // ["Hi,", "How", "are", "you?"]
 
-// The forEach() method calls a function for each element in the array
-
-numbers.forEach((number) => console.log(number)); // 1 // 2 // 3
-
-numbers.forEach((number, index) => console.log(index, number)); // 0 1 // 1 2 // 2 3
+const combined = parts.join('-');
+console.log(combined); // Hi,-how-are-you?
 
 
