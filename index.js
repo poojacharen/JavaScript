@@ -1,22 +1,25 @@
-// Exercise 7 : Movies
+// Functions :
+
+// Function Declarations Vs Expressions :
+
+// In JS, there are 2 ways to declare a function
+// 1. We can use the function declaration syntax or
+// 2. function expression, 
+// which basically involves declaring a variable or a constant and then setiing it to a function
 
 
-const movies = [
-    { title: 'a', year: 2018, rating: 4.5 },
-    { title: 'b', year: 2018, rating: 4.4 },
-    { title: 'c', year: 2018, rating: 4.2 },
-    { title: 'd', year: 2021, rating: 4.0 },
-];
+// Function Declarartion
 
-// All the movies in 2018 with rating > 4
-// Sort them by their rating
-// Descending Order
-// Pick their title
+function walk() {
+    console.log('walk');
+}
 
-const titles = movies
-    .filter(m => m.year === 2018 && m.rating >=4)
-    .sort((a, b) => a.rating - b.rating)
-    .reverse()
-    .map(m => m.title)
 
-console.log(titles);
+// Anonymous Function Expression
+
+const run = function() {
+    console.log('run');
+};
+let move = run;
+run();
+move();
