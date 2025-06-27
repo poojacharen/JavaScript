@@ -1,22 +1,24 @@
 // Functions :
 
-// Hoisting 
-// It is the process of moving function declarations to the top of the file
+// Arguments
 
-// Function Declaration 
-
-walk();
-
-function walk() {
-    console.log('walk');
+function sum(a,b) {
+    return a + b;
 }
 
+console.log(sum(1, 2)); // op - 3
+console.log(sum(1)); // op - NaN : why because 1 + undefined
+console.log(sum()); // op - NaN
+console.log(sum(1, 2, 3, 4, 5)); // op - 3
 
-// Function Expression 
 
-run();
+// By using Arguments
 
-const run = function() {
-    console.log('run');
-};
+function sum() {
+    let total = 0;
+    for (let value of arguments)
+        total += value;
+    return total;
+}
 
+console.log(sum(1, 2, 3, 4, 5, 10)); // op - 25
