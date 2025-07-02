@@ -1,18 +1,25 @@
-// Exercise 2 : Area of Circle
+// Exercise 3 : Error Handling 
 
-// Create a circle object using the object literal syntax. 
-// The object should have a radius property that we can read or write too
-// For eg : circle.radius = 2;
-//         console.log(circle.area);
+// From array exercise occurrences
 
+try {
+    const numbers = [1, 2, 3,4];
+    const count = countOccurrences(null, 1);
+    console.log(count);
+}
+ catch (e) {
+    console.log(e.message);
+ }
 
-const circle = {
-    radius: 1,
-    get area() {
-        return Math.PI * this.radius * this.radius;
-    }
-};
+ function countOccurrences(array, searchElement) {
+    if (!Array.isArray(array))
+        throw new Error('Invalid array.');
 
-console.log(circle.area); 
+    return array.reduce((accumulator, current) => {
+        const occurrence = (current === searchElement) ? 1 : 0;
+        return accumulator + occurrence;
+    }, 0);
+ }
 
+ 
 
