@@ -1,21 +1,36 @@
 // Functions :
 
-// Local Vs Global Scope
+// Let Vs Var
 
 
-const color = 'red';
+// Let 
 
 function start() {
-    const message = 'hi';
-    const color = 'blue';
-    console.log(color);
-}
+    for (let i = 0; i < 5; i++) 
+        console.log(i);
 
-function stop() {
-    const message = 'bye';
+    console.log(i);
 }
 
 start();
 
 
+// Var
 
+function start() {
+    for (var i = 0; i < 5; i++) 
+        console.log(i);
+
+    console.log(i);
+}
+
+start();
+
+// Other eg:
+
+var color = 'red';
+let age = 30;
+
+function sayHi() {
+    console.log('hi');
+}
