@@ -1,37 +1,46 @@
 // Functions :
 
-// The "this" Keyword
+// Changing "this"
 
-// method -> ob
-// function -> global (window, global)
-
-// Eg : 1
+// 1st approach : By using self
 
 const video = {
     title: 'a',
-    play() {
-        console.log(this);
+    tage: ['a', 'b', 'c'],
+    showTags() {
+        const self = this;
+        this.showTags.forEach(function(tag) {
+            console.log(self.title, tag);
+        });
     }
 };
 
-function Video(title) {
-    this.title = title;
+video.showTags();
+
+// 2nd approach
+
+function playVideo(a, b) {
     console.log(this);
 }
 
-const v = new Video('b'); 
+playVideo.call({ name: 'Pooja' }, 1, 2);
+playVideo.apply({ name: 'Pooja' }, [1, 2]);
+playVideo.bind({ name: 'Pooja' })();
 
+playVideo();
 
-// Eg : 2
+// 3rd approach : By using =>
+
 
 const video = {
     title: 'a',
-    tags: ['a', 'b', 'c'],
+    tage: ['a', 'b', 'c'],
     showTags() {
-        this.tags.forEach(function(tag) {
+        this.showTags.forEach(tag => {
             console.log(this.title, tag);
-        }, this);
+        });
+    
     }
 };
 
-VideoPlaybackQuality.showTags();
+video.showTags();
