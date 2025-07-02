@@ -1,24 +1,23 @@
 // Functions :
 
-// Arguments
+// The Rest Operator
 
-function sum(a,b) {
-    return a + b;
+
+// Eg : 1 
+
+function sum(...args) {
+    return args.reduce((a, b) => a + b);
 }
 
-console.log(sum(1, 2)); // op - 3
-console.log(sum(1)); // op - NaN : why because 1 + undefined
-console.log(sum()); // op - NaN
-console.log(sum(1, 2, 3, 4, 5)); // op - 3
+console.log(sum(1, 2, 3, 4, 5, 10)) // op : 25
 
 
-// By using Arguments
+// Eg : 2
 
-function sum() {
-    let total = 0;
-    for (let value of arguments)
-        total += value;
-    return total;
+function sum(discount, ...prices) {
+    const total = prices.reduce((a,b) => a + b);
+    return total * (1 - discount);
 }
 
-console.log(sum(1, 2, 3, 4, 5, 10)); // op - 25
+console.log(sum(0.1, 20, 30)); // op : 45
+
