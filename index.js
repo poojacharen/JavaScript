@@ -1,46 +1,25 @@
-// Functions :
+// Exercise 1 : Sum of Arguments
 
-// Changing "this"
+// Create a function called sum() that takes a varying number of arguments and returns their sum. 
+// We can pass 1, 2, 3 or more -> sum(1, 2, 3...) => 10. We should get 10
+// Use Array.isArray()
 
-// 1st approach : By using self
-
-const video = {
-    title: 'a',
-    tage: ['a', 'b', 'c'],
-    showTags() {
-        const self = this;
-        this.showTags.forEach(function(tag) {
-            console.log(self.title, tag);
-        });
-    }
-};
-
-video.showTags();
-
-// 2nd approach
-
-function playVideo(a, b) {
-    console.log(this);
+// Method 1:
+function sum(...args) {
+    return args.reduce((a, b) => a + b);
 }
 
-playVideo.call({ name: 'Pooja' }, 1, 2);
-playVideo.apply({ name: 'Pooja' }, [1, 2]);
-playVideo.bind({ name: 'Pooja' })();
+console.log(sum(1, 2, 3, 4)); // op - 10
+console.log(Array.isArray([1, 2, 3, 4])); // op - true
 
-playVideo();
+// Method 2:
 
-// 3rd approach : By using =>
+console.log(sum(1, 2, 3, 4));
 
+function sum(...args) {
+    if (args.length === 1 && Array.isArray(items[0]))
+        args = [...args[0]];
 
-const video = {
-    title: 'a',
-    tage: ['a', 'b', 'c'],
-    showTags() {
-        this.showTags.forEach(tag => {
-            console.log(this.title, tag);
-        });
-    
-    }
-};
+    return args.reduce((a, b) => a + b);
+}
 
-video.showTags();
