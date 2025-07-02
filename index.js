@@ -1,36 +1,37 @@
 // Functions :
 
-// Let Vs Var
+// The "this" Keyword
 
+// method -> ob
+// function -> global (window, global)
 
-// Let 
+// Eg : 1
 
-function start() {
-    for (let i = 0; i < 5; i++) 
-        console.log(i);
+const video = {
+    title: 'a',
+    play() {
+        console.log(this);
+    }
+};
 
-    console.log(i);
+function Video(title) {
+    this.title = title;
+    console.log(this);
 }
 
-start();
+const v = new Video('b'); 
 
 
-// Var
+// Eg : 2
 
-function start() {
-    for (var i = 0; i < 5; i++) 
-        console.log(i);
+const video = {
+    title: 'a',
+    tags: ['a', 'b', 'c'],
+    showTags() {
+        this.tags.forEach(function(tag) {
+            console.log(this.title, tag);
+        }, this);
+    }
+};
 
-    console.log(i);
-}
-
-start();
-
-// Other eg:
-
-var color = 'red';
-let age = 30;
-
-function sayHi() {
-    console.log('hi');
-}
+VideoPlaybackQuality.showTags();
