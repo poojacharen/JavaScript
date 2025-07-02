@@ -1,10 +1,27 @@
 // Functions :
 
-// Default Parameters 
+// Getters and Setters
+// It is a special kind of methods
 
-function interest(principal, rate = 3.5, years){
-    return principal * rate / 100 * years;
-}
+// Getters => access properties
+// Setters => change (mutate) them
 
-console.log(interest(10000, undefined, 5)); // op : 1750
+
+const person = {
+    firstname: 'Pooja',
+    lastName: 'Raju',
+    get fullName() {
+        return `${person.firstName} ${person.lastName}`
+    },
+    set fullName(value) {
+        const parts = value.split(' ');
+        this.firstname = parts[0];
+        this.lastName = parts[1];
+    }
+};
+
+person.fullName = 'Poojitha Nagallapati';
+
+console.log(person);
+
 
