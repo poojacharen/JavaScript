@@ -1,25 +1,18 @@
-// Exercise 1 : Sum of Arguments
+// Exercise 2 : Area of Circle
 
-// Create a function called sum() that takes a varying number of arguments and returns their sum. 
-// We can pass 1, 2, 3 or more -> sum(1, 2, 3...) => 10. We should get 10
-// Use Array.isArray()
+// Create a circle object using the object literal syntax. 
+// The object should have a radius property that we can read or write too
+// For eg : circle.radius = 2;
+//         console.log(circle.area);
 
-// Method 1:
-function sum(...args) {
-    return args.reduce((a, b) => a + b);
-}
 
-console.log(sum(1, 2, 3, 4)); // op - 10
-console.log(Array.isArray([1, 2, 3, 4])); // op - true
+const circle = {
+    radius: 1,
+    get area() {
+        return Math.PI * this.radius * this.radius;
+    }
+};
 
-// Method 2:
+console.log(circle.area); 
 
-console.log(sum(1, 2, 3, 4));
-
-function sum(...args) {
-    if (args.length === 1 && Array.isArray(items[0]))
-        args = [...args[0]];
-
-    return args.reduce((a, b) => a + b);
-}
 
