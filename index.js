@@ -1,32 +1,21 @@
 // Functions :
 
-// Try and Catch
+// Local Vs Global Scope
 
 
-const person = {
-    firstname: 'Pooja',
-    lastName: 'Raju',
-    set fullName(value) {
-        if (typeof value !== 'string')
-            throw new Error('Value is not a strung.');
+const color = 'red';
 
-        const parts = value.split(' ');
-        if (parts.length !== 2)
-            throw new Error('Enter a first and last name');
-
-        this.firstname = parts[0];
-        this.lastName = parts[1];
-    }
-};
-
-try {
-    person.fullName = '';
+function start() {
+    const message = 'hi';
+    const color = 'blue';
+    console.log(color);
 }
 
-catch (e) {
-    alert(e);
+function stop() {
+    const message = 'bye';
 }
 
-console.log(person);
+start();
+
 
 
