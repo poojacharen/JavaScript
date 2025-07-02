@@ -1,26 +1,31 @@
 // Functions :
 
-// Getters and Setters
-// It is a special kind of methods
-
-// Getters => access properties
-// Setters => change (mutate) them
+// Try and Catch
 
 
 const person = {
     firstname: 'Pooja',
     lastName: 'Raju',
-    get fullName() {
-        return `${person.firstName} ${person.lastName}`
-    },
     set fullName(value) {
+        if (typeof value !== 'string')
+            throw new Error('Value is not a strung.');
+
         const parts = value.split(' ');
+        if (parts.length !== 2)
+            throw new Error('Enter a first and last name');
+
         this.firstname = parts[0];
         this.lastName = parts[1];
     }
 };
 
-person.fullName = 'Poojitha Nagallapati';
+try {
+    person.fullName = '';
+}
+
+catch (e) {
+    alert(e);
+}
 
 console.log(person);
 
