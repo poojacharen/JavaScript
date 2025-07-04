@@ -9,10 +9,7 @@ try {
 }
  catch (e) {
     console.log(e.message);
-     
  }
-
- 
 
  function countOccurrences(array, searchElement) {
     if (!Array.isArray(array))
