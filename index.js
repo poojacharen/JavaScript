@@ -11,6 +11,7 @@ try {
     console.log(e.message);
      
  }
+
  
 
  function countOccurrences(array, searchElement) {
