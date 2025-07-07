@@ -11,7 +11,6 @@ try {
     console.log(e.message);
  }
 
-
  function countOccurrences(array, searchElement) {
     if (!Array.isArray(array))
         throw new Error('Invalid array.');
