@@ -1,4 +1,4 @@
-// Exercise 3 : Error Handling 
+// Exercise 3 : Error Handling : 
 
 // From array exercise occurrences
 
