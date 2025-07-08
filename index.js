@@ -6,6 +6,7 @@ try {
     const numbers = [1, 2, 3,4];
     const count = countOccurrences(null, 1);
     console.log(count);
+
 }
  catch (e) {
     console.log(e.message);
