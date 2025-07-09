@@ -1,9 +1,26 @@
-// Object Literal :        Draw the robot all at once             const r = { name: "Bot", color: "red" }
+// Exercise 3 : Error Handling 
 
-// Factory Function :      Use a machine to build a new robot    function makeBot() { return {...} }
+// From array exercise occurrences
 
-// Constructor :           Use a magic hammer + blueprint        function Bot() { this.name = "..." } + new     
+try {
+    const numbers = [1, 2, 3,4];
+    const count = countOccurrences(null, 1);
+    console.log(count);
+}
+ catch (e) {
+    console.log(e.message);
+ }
+ 
 
-// Dynamic :               Add/Remove robot parts anytime        robot.laser = true; delete robot.color
+ function countOccurrences(array, searchElement) {
+    if (!Array.isArray(array))
+        throw new Error('Invalid array.');
 
+    return array.reduce((accumulator, current) => {
+        const occurrence = (current === searchElement) ? 1 : 0;
+        return accumulator + occurrence;
+    }, 0);
+ }
+
+ 
 
