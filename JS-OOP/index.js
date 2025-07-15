@@ -1,24 +1,35 @@
 // Objects
 
-// Private Properties and Methods
+// Getters and Setters
 
 function Circle(radius){
     this.radius = radius;
     
     let defaultlocation = { x: 0, y: 0 };
-
-    let computeoptimumLocation = function(factor) {
-        // ...
-    }
+    
+    this.defaultlocation = function() {
+        return defaultlocation;
+    };
 
     this.draw = function() {
-        computeoptimumLocation(0.1);
-
-        console.log('draw');
+       console.log('draw');
     };
+
+    Object.defineProperty(this, 'defaultLocation', {
+        get: function() {
+            return defaultlocation;
+        },
+        set: function(value) {
+            if (!value.x || !value.y)
+                throw new Error('Invalid location.');
+
+            defaultlocation = value;
+        }
+    });
 }
 
 const circle = new Circle(10);
+circle.defaultlocation = 1; // output - invalid error
 circle.draw();
 
 
