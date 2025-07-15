@@ -1,42 +1,31 @@
 // Objects
 
-// Value Vs Reference Types :
-// Primitive types or Values are copied by their values
-// Objects or Reference Types are copied by their reference
+// Add or Removing Properties
 
-// Eg : 1
-
-let x = 10;
-let y = x;
-
-x = 20; // output: x - 20, y - 10
-
-// Eg : 2
-
-let a = {value: 10};
-let b = a;
-
-a.value = 20; // output: a - {value: 20}, b - {value: 20}
-
-// Eg : 3
-
-let number = 10;
-
-function increase(number) {
-    number++;
+function Circle(radius) {
+    this.radius = radius;
+    this.draw = function() {
+        console.log('draw')
+    }
 }
 
-increase(number);
-console.log(number); // output : 10
+const circle = new Circle(10);
 
-// Eg : 4
+// Add property
 
-let obj = { value: 10};
+circle.location = { x: 1 };
+// or
+circle['location'] = { x: 1 };
 
-function increase(obj) {
-    obj.value++;
-}
+// Also, the above can be written as 
 
-increase(obj);
-console.log(obj); // output : {value: 11}
+const propertyName = 'center location';
+circle[propertyName] = { x: 1 };
+
+// Delete Property
+
+delete circle.location;
+//or
+delete circle['location'];
+
 
