@@ -1,18 +1,42 @@
 // Objects
 
-// Functions are Objects 
+// Value Vs Reference Types :
+// Primitive types or Values are copied by their values
+// Objects or Reference Types are copied by their reference
 
-function Circle(radius) {    // circle is a object
-    this.radius = radius;
-    this.draw = function() {
-        console.log('draw');
-    }
+// Eg : 1
+
+let x = 10;
+let y = x;
+
+x = 20; // output: x - 20, y - 10
+
+// Eg : 2
+
+let a = {value: 10};
+let b = a;
+
+a.value = 20; // output: a - {value: 20}, b - {value: 20}
+
+// Eg : 3
+
+let number = 10;
+
+function increase(number) {
+    number++;
 }
 
-Circle.call({}, 1);
-Circle.apply({}, [1, 2, 3]);
+increase(number);
+console.log(number); // output : 10
 
-const another = new Circle(1);
+// Eg : 4
 
+let obj = { value: 10};
 
+function increase(obj) {
+    obj.value++;
+}
+
+increase(obj);
+console.log(obj); // output : {value: 11}
 
