@@ -1,9 +1,18 @@
 // Objects
 
-// Constructor Property
+// Functions are Objects 
 
-new String(); // '', "", ``
-new Boolean(); // true, false
-new Number(); // 1, 2, 3, ...
+function Circle(radius) {    // circle is a object
+    this.radius = radius;
+    this.draw = function() {
+        console.log('draw');
+    }
+}
 
-// Every object has a constructor property and that references the function that was used to create that object
+Circle.call({}, 1);
+Circle.apply({}, [1, 2, 3]);
+
+const another = new Circle(1);
+
+
+
