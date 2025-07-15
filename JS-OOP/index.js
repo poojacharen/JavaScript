@@ -1,12 +1,16 @@
-// Part 2 : Object Oriented Programming
+// Objects
 
-// Benefits of OOP:
+// Object Literals
 
-// 1. Encapsulation - We group related variables and functions together and this way we can reduce complexity and increase reusability
+const circle = {
+    radius: 1,
+    location: {
+        x: 1,
+        y: 1
+    },
+    draw: function() {
+        console.log('draw');
+    }
+};
 
-// 2. Abstraction -  We hide the detils and the complexity and show only the essentials. This technique reduces complexity and also isolates
-//                   the impact of changes in the code
-
-// 3. Inheritance - We can eliminate redundant code
-
-// 4. Polymorphism - We can refactor ugly switch case statements 
+circle.draw(); // draw
