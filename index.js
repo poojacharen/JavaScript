@@ -1,9 +1,9 @@
-// Object Literal :        Draw the robot all at once             const r = { name: "Bot", color: "red" }
-
-// Factory Function :      Use a machine to build a new robot    function makeBot() { return {...} }
-
-// Constructor :           Use a magic hammer + blueprint        function Bot() { this.name = "..." } + new     
-
-// Dynamic :               Add/Remove robot parts anytime        robot.laser = true; delete robot.color
 
 
+// const number = sum([1, 2, 3, 4]);
+
+function sum(...args) {
+    return args.reduce((a, b) => a + b);
+}
+
+console.log(sum(1, 2, 3, 4));
