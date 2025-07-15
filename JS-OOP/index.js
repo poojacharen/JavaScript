@@ -1,6 +1,24 @@
 // Objects
 
-// Abstraction : we should hide the details and complexity and show or expose only the essentials
+// Private Properties and Methods
 
+function Circle(radius){
+    this.radius = radius;
+    
+    let defaultlocation = { x: 0, y: 0 };
+
+    let computeoptimumLocation = function(factor) {
+        // ...
+    }
+
+    this.draw = function() {
+        computeoptimumLocation(0.1);
+
+        console.log('draw');
+    };
+}
+
+const circle = new Circle(10);
+circle.draw();
 
 
