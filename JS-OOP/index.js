@@ -1,31 +1,27 @@
 // Objects
 
-// Add or Removing Properties
+// Enumerating Properties
 
 function Circle(radius) {
-    this.radius = radius;
+    this.radiud = radius;
     this.draw = function() {
-        console.log('draw')
+        console.log('draw');
     }
 }
 
 const circle = new Circle(10);
 
-// Add property
+// To enumerate all the members in an object we can use "for in" loop 
+for (let key in circle) {
+    if (typeof circle[key] !== 'function')
+        console.log(key, circle[key]);
+}
 
-circle.location = { x: 1 };
-// or
-circle['location'] = { x: 1 };
+// to get all the keys use "object.keys"
+const keys = Object.keys(circle);
+console.log(keys);
 
-// Also, the above can be written as 
-
-const propertyName = 'center location';
-circle[propertyName] = { x: 1 };
-
-// Delete Property
-
-delete circle.location;
-//or
-delete circle['location'];
-
+// check for the existence of a property or a method in an object use the "in" operator
+if('radius' in circle)
+    console.log('Circle has a radius.');
 
