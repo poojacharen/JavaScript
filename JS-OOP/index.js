@@ -1,29 +1,21 @@
 // Prototypes
 
-// Prototypes and Prototypical Inheritance
+// Multi-level Inheritance
+// This means that a class can inherit from another class, which in turn can inherit from another class and so on...
 
-// Prototypes :
-// A prototype is an object that is asoociated with every function and object in JavaScript.
+// Eg: 
 
-// eg: 
-// Function.prototype is the prototype for all functions
-// Object.prototype is the prototype for all objects
+function Circle(radius) {
+    this.radius = radius;
+    this.draw = function() {
+        console.log('draw');
+    }
+}
 
-// let x = {};
-// x
-// {}
-// x.__proto__
-// This means that x is an object and its prototype is Object.prototype
+const another = new Circle(10);
 
-// Prototypical Inheritance :
-// It is a feature in JS that allows an object to inherit properties and methods from another object.
+// How is multi-level achieved from the above example?
+// Circle is a class, and another is an instance of circle.
 
-// eg:
-// let person = {
-//   name: 'John',
-//   greet: function() {
-//      console.log(`Hello, my name is ${this.name}`);
-//  }
-// }
 
 
