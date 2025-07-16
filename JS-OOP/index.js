@@ -1,21 +1,21 @@
 // Prototypes
 
-// Multi-level Inheritance
-// This means that a class can inherit from another class, which in turn can inherit from another class and so on...
+// Property Attributes
+// In JS, properties can have attributes that define their behaviour.
+// These attributes can be set using Object.defineProperty().
 
-// Eg: 
+// 1. Writable : If true, the property can be changed. If false, it cannot be changed.
+// 2. Enumerable : If true, the property will show up in loops like for...in. If false, it will not.
+// 3. Configurable : If true, the property can be deleted or changed. If false, it cannot be deleted or changed.
 
-function Circle(radius) {
-    this.radius = radius;
-    this.draw = function() {
-        console.log('draw');
-    }
-}
+let person = { name: 'Pooja' };
 
-const another = new Circle(10);
+Object.defineProperty(person, 'name', {
+    writable: false,
+    enumerable: true,
+    configurable: false
+});
 
-// How is multi-level achieved from the above example?
-// Circle is a class, and another is an instance of circle.
+person.name = 'John'; // This will not change the name property
 
-
-
+console.log(Object.keys(person)); // ['name']
