@@ -1,27 +1,34 @@
 // Prototypes
 
-// Prototype Vs Instance Members
+// Iterating Instance and Prototype Members
+// Instance members are properties and methods defined directly on the instance.
+// Prototype members are properties and methods defined on the prototype of the constructor function.
 
 function Circle(radius) {
     // Instance members
     this.radius = radius;
 
     this.move = function() {
-        this.draw();
         console.log('move');
     }
 }
+
+const c1 - new Circle(1);
 
 //  Prototype members
 Circle.prototype.draw = function() {
     console.log('draw');
 }
 
-const c1 = new Circle(1);
-const c2 = new Circle(1);
+c1.draw();
 
-Circle.prototype.toString = function() {
-    return 'Circle with radius ' + this.radius;
-}
+// Returns instance members
+console.log(Object.keys(c1));
+
+// Returns all members (instace + prototype) // instance are also known as own properties
+for (let key in c1) console.log(key);
+
+
+
 
 
