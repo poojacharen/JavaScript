@@ -1,26 +1,27 @@
 // Prototypes
 
-// Constructor Prototypes
+// Prototype Vs Instance Members
 
-// This is a constructor function
-// It is used to create objects with a specific structure
-// The structure is defined by the properties nad methods within the function
+function Circle(radius) {
+    // Instance members
+    this.radius = radius;
 
-// eg:
-
-function Person(name, age) {
-    this.name = name; // 'this;' refers to the instance of the object being created
-    this.age = age;
-    this.sayHello = function() {
-        console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+    this.move = function() {
+        this.draw();
+        console.log('move');
     }
 }
 
-// Creating an instance of the Person object
+//  Prototype members
+Circle.prototype.draw = function() {
+    console.log('draw');
+}
 
-const person1 = new Person('John', 30);
+const c1 = new Circle(1);
+const c2 = new Circle(1);
 
-// Accessing properties and methods of the object
+Circle.prototype.toString = function() {
+    return 'Circle with radius ' + this.radius;
+}
 
-console.log(person1.name); // Output: John
 
