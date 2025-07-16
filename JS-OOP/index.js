@@ -1,21 +1,26 @@
 // Prototypes
 
-// Property Attributes
-// In JS, properties can have attributes that define their behaviour.
-// These attributes can be set using Object.defineProperty().
+// Constructor Prototypes
 
-// 1. Writable : If true, the property can be changed. If false, it cannot be changed.
-// 2. Enumerable : If true, the property will show up in loops like for...in. If false, it will not.
-// 3. Configurable : If true, the property can be deleted or changed. If false, it cannot be deleted or changed.
+// This is a constructor function
+// It is used to create objects with a specific structure
+// The structure is defined by the properties nad methods within the function
 
-let person = { name: 'Pooja' };
+// eg:
 
-Object.defineProperty(person, 'name', {
-    writable: false,
-    enumerable: true,
-    configurable: false
-});
+function Person(name, age) {
+    this.name = name; // 'this;' refers to the instance of the object being created
+    this.age = age;
+    this.sayHello = function() {
+        console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+    }
+}
 
-person.name = 'John'; // This will not change the name property
+// Creating an instance of the Person object
 
-console.log(Object.keys(person)); // ['name']
+const person1 = new Person('John', 30);
+
+// Accessing properties and methods of the object
+
+console.log(person1.name); // Output: John
+
