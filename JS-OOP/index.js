@@ -1,20 +1,21 @@
 // Prototypical Inheritance
 // This represents a simple example of prototypical inheritance in JS
 
-// Resetting The Constructor
-// When you create a new object using a constructor function, the prototype chain is set up.
-// However, if you create a new object using Object.create(), the constructor property is not set to the constructor function.
-// To fix this, you can reset the constructor property of the prototype to point to the constructor function.
+// Calling the Super Constructor 
+// In JS, we can create a prototype chain where one object can inherit properties and methods from another object.
+// This is done using the 'Object.create()' method, which creates a new object with the specified prototype object and properties.
 
-function Shape() {
+function Shape(color) {
+    this.color = color;
 }
 
 Shape.prototype.duplicate = function() {
     console.log('duplicate');
 }
 
-function Circle() {
-    this.radius = this.radius;
+function Circle(radius, color) {
+    Shape.call(this, color);  // Call the super constructor to initialize the color property
+    this.radius = radius;
 }
 
 // Circle.prototype.constructor = Circle; 
@@ -28,4 +29,4 @@ Circle.prototype.draw = function() {
 }
 
 const s = new Shape();
-const c = new Circle(1);
+const c = new Circle(1, 'blue');
