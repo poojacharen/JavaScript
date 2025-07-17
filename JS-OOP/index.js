@@ -1,44 +1,9 @@
 // Prototypical Inheritance
 // This represents a simple example of prototypical inheritance in JS
 
-// Polymorphism - poly means many, morph means forms
-// This is the main concept of polymorphism in JS, which allows methods to be used interchangeably between different objects.
-
-
-
-function extend(Child, Parent) {
-    Child.prototype = Object.create(Parent.prototype);
-    Child.prototype.constructor = Child;
-}
-
-function Shape() {
-}
-
-Shape.prototype.duplicate = function() {
-    console.log('duplicate');
-}
-
-function Circle() {
-}
-
-extend(Circle, Shape);
-
-Circle.prototype.duplicate = function() {
-    console.log('duplicate circle');
-}
-
-function Square() {
-}
-
-Square.prototype.duplicate = function() {
-    console.log('duplicate square');
-}
-
-const shapes = [
-    new Circle(),
-    new Square()
-];
-
-for (let shape of shapes) {
-    shape.duplicate(); // This will call the duplicate method of Circle or Square based on the object type
-}
+// When to Use Inheritance 
+// 1. When you want to create a new object that is a specialized version of an existing object
+// 2. When you want to share methods and properties between objects
+// 3. When you want to create a hierarchy of objects
+// 4. When you want to implement polymorphism
+// 5. Do not use inheritance when you want to create a new object that is not related to an existing object
