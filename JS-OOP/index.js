@@ -1,9 +1,10 @@
 // Prototypical Inheritance
 // This represents a simple example of prototypical inheritance in JS
 
-// Method Overriding
-// This means that a child class can override methods defined in the parent class
-// In this example, we have a Shape class and two derived classes : Circle and Square
+// Polymorphism - poly means many, morph means forms
+// This is the main concept of polymorphism in JS, which allows methods to be used interchangeably between different objects.
+
+
 
 function extend(Child, Parent) {
     Child.prototype = Object.create(Parent.prototype);
@@ -23,8 +24,21 @@ function Circle() {
 extend(Circle, Shape);
 
 Circle.prototype.duplicate = function() {
-    Shape.prototype.duplicate.call(this); // we used this to call the parent method
     console.log('duplicate circle');
 }
 
-const c = new Circle();
+function Square() {
+}
+
+Square.prototype.duplicate = function() {
+    console.log('duplicate square');
+}
+
+const shapes = [
+    new Circle(),
+    new Square()
+];
+
+for (let shape of shapes) {
+    shape.duplicate(); // This will call the duplicate method of Circle or Square based on the object type
+}
