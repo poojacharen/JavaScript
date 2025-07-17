@@ -1,9 +1,47 @@
 // Prototypical Inheritance
 // This represents a simple example of prototypical inheritance in JS
 
-// When to Use Inheritance 
-// 1. When you want to create a new object that is a specialized version of an existing object
-// 2. When you want to share methods and properties between objects
-// 3. When you want to create a hierarchy of objects
-// 4. When you want to implement polymorphism
-// 5. Do not use inheritance when you want to create a new object that is not related to an existing object
+// Mixins
+// This means that we can add properties and methods to an object after it has been created.
+// This is useful for adding functionality to objects without modifying their constructor.
+
+function mixin(target, ...sources) {
+    Object.assign(target, ...sources);
+}
+
+const canEat = {
+    eat: function() {
+        this.hunger--;
+        console.log('eating');
+    }
+};
+
+const canWalk = {
+    walk: function() {
+        console.log('walking');
+    }
+};
+
+const canSwim = {
+    swim: function() {
+        console.log('swim');
+    }
+};
+
+function Person() {
+}
+
+mixin(Person.prototype, canEat, canWalk);
+
+const Person = new Person();
+console.log(person);
+
+function Goldfish() {
+}
+
+mixin(Goldfish.prototype, canEat, canSwim);
+
+const goldfish = new Goldfish();
+console.log(goldfish);
+
+
