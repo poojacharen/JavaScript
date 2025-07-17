@@ -1,47 +1,31 @@
 // Prototypical Inheritance
 // This represents a simple example of prototypical inheritance in JS
 
-// Mixins
-// This means that we can add properties and methods to an object after it has been created.
-// This is useful for adding functionality to objects without modifying their constructor.
+// Exercise : Prototypical Inheritance
 
-function mixin(target, ...sources) {
-    Object.assign(target, ...sources);
+function HtmlElement() {
+    this.click = function() {
+        console.log('clicked');
+    }
 }
 
-const canEat = {
-    eat: function() {
-        this.hunger--;
-        console.log('eating');
-    }
-};
-
-const canWalk = {
-    walk: function() {
-        console.log('walking');
-    }
-};
-
-const canSwim = {
-    swim: function() {
-        console.log('swim');
-    }
-};
-
-function Person() {
+HtmlElement.prototype.focus = function() {
+    console.log('focused');
 }
 
-mixin(Person.prototype, canEat, canWalk);
+function HtmlSelelectedElement(items = []) {
+    this.items = items;
 
-const Person = new Person();
-console.log(person);
+    this.addItem = function(item) {
+        this.items.push(item);
+    }
 
-function Goldfish() {
+    this.removeItem = function(item) {
+        this.items.splice(this.items.indexOf(item), 1);
+    }
 }
 
-mixin(Goldfish.prototype, canEat, canSwim);
-
-const goldfish = new Goldfish();
-console.log(goldfish);
+HtmlSelelectedElement.prototype = new HtmlElement();
+HtmlSelelectedElement.prototype.constructor = HtmlElement;
 
 
