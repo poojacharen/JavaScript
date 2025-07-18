@@ -1,4 +1,4 @@
-// Prototypical Inheritance
+// Prototypical Inheritance :
 // This represents a simple example of prototypical inheritance in JS
 
 // Exercise : Polymorphism
