@@ -1,22 +1,21 @@
 // ES6 Classes :
 
-// Private Properties/Members Using WeakMaps
+// Getters and Setters
 
 const _radius = new WeakMap();;
-const _move = new WeakMap();
 
 class Circle {
     constructor(radius) {
         _radius.set(this, radius);
-        _move.set(this, () => {
-            console.log('move', this);
-        });
     }
 
-    draw() {
-        _move.get(this)();
+    get radius() {
+        return _radius.get(this);
+    }
 
-        console.log('draw');
+    set radius(value) {
+        if (value <= 0) throw new Error('invalid radius')
+            _radius.set(this, value);
     }
 }
 
