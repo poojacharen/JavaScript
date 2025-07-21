@@ -1,30 +1,14 @@
 // ES6 Classes :
 
-// ES6 Classes
+// Hoisting
 
-// function Circle(radius) {
-//     this.radius = radius;
-
-//     this.draw = function() {
-//         console.log('draw');
-//     }
-// }
+// Class decarations are not hoisted
 
 class Circle {
-    constructor(radius) {
-        this.radius = radius;
-        this.move = function() {}
-        
-    }
-
-    draw() {
-        console.log('draw');
-    }
 }
 
-const c = new Circle(1);
+// Class Expressions are not hoisted
 
-
-
-
-
+const Square = class {
+    
+};
