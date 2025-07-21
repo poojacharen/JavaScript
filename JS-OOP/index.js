@@ -1,49 +1,30 @@
-// Prototypical Inheritance
-// This represents a simple example of prototypical inheritance in JS
+// ES6 Classes :
 
-// Exercise : Polymorphism
+// ES6 Classes
 
-function HtmlElement() {
-    this.click = function() {
-        console.log('clicked');
+// function Circle(radius) {
+//     this.radius = radius;
+
+//     this.draw = function() {
+//         console.log('draw');
+//     }
+// }
+
+class Circle {
+    constructor(radius) {
+        this.radius = radius;
+        this.move = function() {}
+        
+    }
+
+    draw() {
+        console.log('draw');
     }
 }
 
-HtmlElement.prototype.focus = function() {
-    console.log('focused');
-}
+const c = new Circle(1);
 
-function HtmlSelelectedElement(items = []) {
-    this.items = items;
 
-    this.addItem = function(item) {
-        this.items.push(item);
-    }
 
-    this.removeItem = function(item) {
-        this.items.splice(this.items.indexOf(item), 1);
-    }
-
-        this.render = function() {
-    return `
-<select>${this.items.map(item => `
-    <option>${item}</option>`).join('')}
-</select>`;
- }
-}
-
-HtmlSelelectedElement.prototype = new HtmlElement();
-HtmlSelelectedElement.prototype.constructor = HtmlElement
-
-function HtmlImageElement(src) {
-    this.src = src;
-
-    this.render = function() {
-        return `<img src="${this.src}" />`
-    }
-}
-
-HtmlSelelectedElement.prototype = new HtmlElement();
-HtmlSelelectedElement.prototype.constructor = HtmlElement
 
 
