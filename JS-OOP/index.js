@@ -1,37 +1,27 @@
 // ES6 Classes :
 
-// The "this" Keyword
-// The "this" keyword refers to the object that is executing the currennt function
+// Private Members Using Symbols 
+// This is a way to create private members in ES6 classes using symbols
+// This is not a true private member, but it is a way to create a member that is not easily accessible
 
-'use strict';
-
-const Circle = function() {
-    this.draw = function() {
-        console.log(this);
-    }
-};
-
-const c = new Circle();
-
-// Method Call // "this" refers to the object that is executing the current function
-c.draw();
-
-const draw = c.draw;
-
-// Function Call
-draw(); // undefined in strict mode, global object in non-strict mode
-
-
-
-// Another example
+const _radius = Symbol();
+const _draw = Symbol();
 
 class Circle {
-    draw() {
-        console.log(this);
+    constructor(radius) {
+        this[_radius] = radius;
+    }
+
+    [_draw] () {
+
     }
 }
 
-const c = new Circle();
-const draw = c.draw;
-draw(); //  op - undefined
+const c = new Circle(1);
+const key = Object.getOwnPropertySymbols(c)[0];
+console.log(c[key]);
+
+
+
+
    
