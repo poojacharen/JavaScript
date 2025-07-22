@@ -1,8 +1,8 @@
 // ES6 Tooling
 
-// CommonJS Modules
-// It is used to import modules in Node.js and other environments that support CommonJS
+// ES6 Modules
 
+import {Circle} from './circle.js';
 
-
-
+const c = new Circle(10);
+c.draw();
