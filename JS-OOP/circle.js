@@ -1,6 +1,6 @@
 // ES6 Tooling
 
-// ES6 Modules
+// ES6 Modules :
 
 const_radius = new WeakMap();
 
